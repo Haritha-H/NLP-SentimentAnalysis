@@ -38,7 +38,7 @@ A simple NLP project to classify tweets based on sentiment. Dataset is acquired 
   >
   >RUN pip3 install -r requirements.txt
   >
-  >EXPOSE 4000
+  >RUN python -m nltk.downloader punkt
   >
   >ENTRYPOINT  ["python"]
   >
@@ -48,4 +48,4 @@ A simple NLP project to classify tweets based on sentiment. Dataset is acquired 
   >docker build -t sentiment_api . 
 
 **Step 3: Run the docker**
-  >docker run -p 8000:8000 sentiment_api
+  >docker run -p 4000:4000 sentiment_api
